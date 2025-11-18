@@ -1,0 +1,63 @@
+@startuml
+left to right direction
+
+class Jogo {
+    - n_jogadores : List
+    - baralho : Baralho
+    - banco : Banco
+}
+
+abstract class Carta {
+    - nome_influencia : str
+    + acao(j : Jogador, moedas : int)
+    + bloqueio(influencia : Carta)
+}
+
+class Capitao
+class Duke
+class Assassino
+class Condessa
+class Embaixador
+
+Carta <|-- Capitao
+Carta <|-- Duke
+Carta <|-- Assassino
+Carta <|-- Condessa
+Carta <|-- Embaixador
+
+class Banco {
+    - dinheirinhos_brasileiros : int
+    + add_moedas(j : Jogador, n_moedas : int)
+    + remove(j : Jogador, n_moedas : int)
+}
+
+class Baralho {
+    - n_cartas : int
+    - cartas : List
+    + add_carta(c : Carta)
+    + remove_carta(c : Carta)
+    + embaralhar()
+}
+
+class Jogador {
+    - nome : str
+    - moedas : int
+    - deck : List
+    + executar_acao(j : Jogador, c : Carta)
+    + remove_deck()
+    + renda()
+    + golpe()
+    + ajuda_externa()
+}
+
+' --- Relacionamentos ---
+Jogo *-- Banco
+Jogo o-- Jogador
+Jogo *-- Baralho
+
+Baralho *-- Carta
+Jogador o-- Carta
+
+Embaixador ..> Baralho : usa
+Banco ..> Jogador : transfere moedas
+@enduml
