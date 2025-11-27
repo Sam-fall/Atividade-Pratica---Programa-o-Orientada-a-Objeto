@@ -1,6 +1,9 @@
 import threading
 import time
 from typing import Callable, Dict, List
+from banco import *
+from cartas_baralho import *
+from jogador import *
 
 class Banco:
     moedas : int
@@ -367,3 +370,5 @@ class Jogo:
         if tipo != "assassinar":
             self.estado = "aguardando_ação"
             self.passar_turno()
+
+j = Jogo(1, 2)

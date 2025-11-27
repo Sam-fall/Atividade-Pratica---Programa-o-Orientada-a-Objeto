@@ -1,7 +1,41 @@
 # Atividade-Pratica---Programa-o-Orientada-a-Objeto
+
+## Identificação do Grupo
+* **Nome:** Fabrizio Jacinto  | **E-mail:** fabrizio.j@unisantos.br
+* **Nome:** Samuel Meneses | **E-mail:** samuel.meneses@unisnatos.br
+
+* **Link do Repositório:** 
+https://github.com/Sam-fall/Atividade-Pratica---Programa-o-Orientada-a-Objeto.git
+
+## Sobre o Projeto
+Este projeto consiste na implementação do jogo de cartas **Coup** utilizando a linguagem Python. O objetivo principal é demonstrar a aplicação prática de conceitos fundamentais e avançados de **Programação Orientada a Objetos (POO)**.
+
+Destaques da implementação:
+* **Herança e Abstração:** Utilização da classe abstrata `Carta(ABC)` como base para todas as cartas do jogo, garantindo que todas as subclasses (`Capitao`, `Assassino`, `Duque`, etc.) implementem os métodos obrigatórios.
+* **Polimorfismo:** Cada carta possui sua própria implementação dos métodos `acao()` e `bloqueio()`, permitindo comportamentos distintos para uma mesma chamada de método.
+* **Gerenciamento de Estado:** A classe `Jogo` gerencia o fluxo de turnos, contestações e o estado de vida dos jogadores.
+
+> **Nota sobre o desenvolvimento:** O projeto encontra-se em estágio de desenvolvimento. As mecânicas centrais de influência, renda e ações de personagens estão implementadas, mas funcionalidades como o loop de rede e finalização de partida podem apresentar limitações nesta versão.
+
+## Configurações e Como Executar
+
+### Pré-requisitos
+Para executar este software, você precisará de:
+* **Python 3.13.3** instalado.
+* Bibliotecas padrão do Python (`abc`, `random`, `threading`, `time`, `typing`). Não é necessária a instalação de pacotes externos.
+
+### Executando o Jogo
+1. Certifique-se de que todos os arquivos do código fonte (`Classe_jogo.py`, `cartas_baralho.py`, `jogador.py`, `banco.py`) estão no mesmo diretório.
+2. Abra o terminal na pasta do projeto.
+3. Execute o arquivo principal do jogo:
+
+```bash
+python Classe_jogo.py
+```
 Implementação do jogo de carta Coup desenvolvida em Python. O projeto demonstra a aplicação prática de conceitos avançados de POO (herança, polimorfismo, encapsulamento) e documentação de software através de diagramas de classe UML (PlantUML/Mermaid).
 
-
+---
+ 
 # Coup
 **Regras:** 
 
